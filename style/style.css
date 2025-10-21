@@ -1,0 +1,273 @@
+/* --- Variables de Color y Estilos Base --- */
+:root {
+  --bg-dark: #12121f;
+  --bg-card: #1a1a2e;
+  --primary: #8a2be2; /* Violeta Neón */
+  --secondary: #00bfff; /* Azul Neón */
+  --text-light: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --success: #28a745;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* --- Estilos de Navegación --- */
+.header {
+  background-color: rgba(26, 26, 46, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+}
+.logo i {
+  color: var(--primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-icons a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-left: 1.5rem;
+}
+
+.hamburger {
+  display: none; /* Oculto en escritorio */
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+/* --- Sección de Héroe --- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* --- Botón Principal (Call to Action) --- */
+.cta-button {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
+}
+
+/* --- Sección de Productos --- */
+.products {
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.products h2 i {
+  color: var(--secondary);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+.add-to-cart-btn:hover {
+  background-color: #6a1eae;
+}
+.add-to-cart-btn.added {
+  background-color: var(--success);
+}
+
+/* --- Pie de Página --- */
+.footer {
+  text-align: center;
+  padding: 2rem 5%;
+  margin-top: 2rem;
+  background-color: var(--bg-card);
+}
+
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: var(--primary);
+}
+
+/* --- ✨ DISEÑO RESPONSIVO ✨ --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Oculta el menú de escritorio */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Altura de la barra de navegación */
+    left: 0;
+    background-color: var(--bg-card);
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* Muestra el menú cuando está activo */
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: block; /* Muestra el ícono de hamburguesa */
+  }
+
+  .hero {
+    grid-template-columns: 1fr; /* Apila las columnas */
+    text-align: center;
+  }
+
+  .hero-image {
+    grid-row: 1; /* Mueve la imagen arriba en móviles */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
